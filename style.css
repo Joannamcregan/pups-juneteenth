@@ -33,7 +33,10 @@ img{
     margin: auto;
 }
 .top-section{
+    width: 720px;
+    max-width: 95%;
     padding: 20px 0px;
+    margin: auto;
 }
 .left-border-section{
     width: 720px;
@@ -44,6 +47,17 @@ img{
     margin: auto;
 }
 .left-border-section img{
+    border: solid var(--dark-green) 5px;
+}
+.right-border-section{
+    width: 720px;
+    max-width: 95%;
+    border-top: solid var(--dark-green) 5px;
+    border-right: solid var(--dark-green) 5px;
+    padding: 10px;
+    margin: auto;
+}
+.right-border-section img{
     border: solid var(--dark-green) 5px;
 }
 body{
@@ -67,6 +81,11 @@ a{
 .h1-larger{
     font-size: 50px;
     color: var(--dark-green);
+}
+@media screen and (max-width: 360px){
+    .h1-larger{
+        font-size: 44px;
+    }
 }
 h2{
     font-size: 40px;
