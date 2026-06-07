@@ -9,7 +9,7 @@
 }
 .bloom{
     animation: bloom 1s forwards;
-    padding: 20px 0px;
+    padding: 20px 0px 0px 0px;
 }
 @keyframes bloom {
     0% {
@@ -17,19 +17,39 @@
         opacity: 0;
     }
     90% {
-        transform: scale(1.1);
-        opacity: 1;
+        transform: scale(1.03);
+        opacity: 0.5;
     }
     100% {
         transform: scale(1);
+        opacity: 1;
     }
+}
+img{
+    width: 700px;
+    max-width: 90%;
+    height: auto;
+    display: block;
+    margin: auto;
+}
+.top-section{
+    padding: 20px 0px;
+}
+.left-border-section{
+    width: 720px;
+    max-width: 95%;
+    border-top: solid var(--dark-red) 5px;
+    border-left: solid var(--dark-red) 5px;
+    padding: 10px;
+    margin: auto;
+}
+.left-border-section img{
+    border: solid var(--dark-green) 5px;
 }
 body{
     font-family: sans-serif;
 }
-body h1, body h2, body h3, body h4, body p, body span{
-    width: 720px;
-    max-width: 95%;
+h1, h2, h3, h4, p, span{
     margin: 10px auto;
 }
 p, span{
