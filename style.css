@@ -2,6 +2,9 @@
   --dark-red: rgb(96, 0, 0);
   --dark-green: rgb(0, 55, 22)
 }
+body{
+    background: rgb(237, 235, 231);
+}
 .pre-bloom{
     visibility: hidden;
     height: 50px;
@@ -25,12 +28,67 @@
         opacity: 1;
     }
 }
+.pre-slide-down{
+    visibility: hidden;
+    transform: translateY(-100%);
+}
+.slide-down{
+    animation: slide-down 1s forwards;
+    padding: 20px 0px 0px 0px;
+}
+@keyframes slide-down {
+    0% {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+.pre-slide-left{
+    visibility: hidden;
+    transform: translateX(100%);
+    width: fit-content;
+}
+.slide-left{
+    animation: slide-left 1s forwards;
+    padding: 20px 0px 0px 0px;
+    width: fit-content;
+}
+@keyframes slide-left {
+    0% {
+        transform: translateX(100%);
+        opacity: 0;
+    }    
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
 img{
     width: 700px;
     max-width: 90%;
-    height: auto;
     display: block;
     margin: auto;
+}
+iframe{
+    max-height: 400px;
+    max-width: 90%;
+    display: block;
+    margin: auto !important;
+}
+@media screen and (max-width: 600px){
+    iframe{
+        max-width: 90% !important;
+        min-height: 300px !important;
+    }
+}
+@media screen and (max-width: 400px){
+    iframe{
+        max-width: 80% !important;
+        min-width: 280px !important;
+    }
 }
 .top-section{
     width: 720px;
@@ -46,8 +104,8 @@ img{
     padding: 10px;
     margin: auto;
 }
-.left-border-section img{
-    border: solid var(--dark-green) 5px;
+.left-border-section img, .left-border-section iframe{
+    border: solid var(--dark-green) 5px !important;
 }
 .right-border-section{
     width: 720px;
@@ -57,8 +115,8 @@ img{
     padding: 10px;
     margin: auto;
 }
-.right-border-section img{
-    border: solid var(--dark-green) 5px;
+.right-border-section img, .right-border-section iframe{
+    border: solid var(--dark-red) 5px !important;
 }
 body{
     font-family: sans-serif;
