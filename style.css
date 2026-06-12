@@ -12,7 +12,7 @@ body{
 }
 .bloom{
     animation: bloom 1s forwards;
-    padding: 20px 0px 0px 0px;
+    /* padding: 10px 0px 0px 0px; */
 }
 @keyframes bloom {
     0% {
@@ -34,7 +34,7 @@ body{
 }
 .slide-down{
     animation: slide-down 1s forwards;
-    padding: 20px 0px 0px 0px;
+    /* padding: 10px 0px 0px 0px; */
 }
 @keyframes slide-down {
     0% {
@@ -53,7 +53,7 @@ body{
 }
 .slide-left{
     animation: slide-left 1s forwards;
-    padding: 20px 0px 0px 0px;
+    /* padding: 10px 0px 0px 0px; */
     width: fit-content;
 }
 @keyframes slide-left {
@@ -66,17 +66,37 @@ body{
         opacity: 1;
     }
 }
+.pre-slide-right{
+    visibility: hidden;
+    transform: translateX(-100%);
+    width: fit-content;
+}
+.slide-right{
+    animation: slide-right 1s forwards;
+    /* padding: 10px 0px 0px 0px; */
+    width: fit-content;
+}
+@keyframes slide-right {
+    0% {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
 img{
     width: 700px;
     max-width: 90%;
     display: block;
-    margin: auto;
+    margin: 20px auto;
 }
 iframe{
     max-height: 400px;
     max-width: 90%;
     display: block;
-    margin: auto !important;
+    margin: 20px auto !important;
 }
 @media screen and (max-width: 600px){
     iframe{
@@ -121,8 +141,11 @@ iframe{
 body{
     font-family: sans-serif;
 }
-h1, h2, h3, h4, p, span{
-    margin: 10px auto;
+h1, h2, h3, h4{
+    margin: 30px auto 0px auto;
+}
+p, span{
+    margin: 20px auto 0px auto;
 }
 p, span, h4{
     font-size: 20px;
